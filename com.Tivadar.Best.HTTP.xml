@@ -593,7 +593,7 @@
                                        -- analogous to the id-regInfo-utf8Pairs string defined
                                        -- for regInfo in CertReqMsg [CRMF]
                         }
-            </pre> 
+            </pre>
             @return a basic ASN.1 object representation.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cmp.CertStatus.ToAsn1Object">
@@ -937,7 +937,7 @@
                                     keyPairHist         [2] SEQUENCE SIZE (1..MAX) OF
                                                                       CertifiedKeyPair OPTIONAL
                          }
-            </pre> 
+            </pre>
             @return a basic ASN.1 object representation.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cmp.NestedMessageContent">
@@ -1560,18 +1560,18 @@
             </pre>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.AuthEnvelopedDataParser">
-            Produce an object suitable for an Asn1OutputStream.
+             Produce an object suitable for an Asn1OutputStream.
             
-            <pre>
-            AuthEnvelopedData ::= SEQUENCE {
-              version CMSVersion,
-              originatorInfo [0] IMPLICIT OriginatorInfo OPTIONAL,
-              recipientInfos RecipientInfos,
-              authEncryptedContentInfo EncryptedContentInfo,
-              authAttrs [1] IMPLICIT AuthAttributes OPTIONAL,
-              mac MessageAuthenticationCode,
-              unauthAttrs [2] IMPLICIT UnauthAttributes OPTIONAL }
-            </pre>
+             <pre>
+             AuthEnvelopedData ::= SEQUENCE {
+               version CMSVersion,
+               originatorInfo [0] IMPLICIT OriginatorInfo OPTIONAL,
+               recipientInfos RecipientInfos,
+               authEncryptedContentInfo EncryptedContentInfo,
+               authAttrs [1] IMPLICIT AuthAttributes OPTIONAL,
+               mac MessageAuthenticationCode,
+               unauthAttrs [2] IMPLICIT UnauthAttributes OPTIONAL }
+             </pre>
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.CmsObjectIdentifiers.id_ri">
             The other Revocation Info arc
@@ -1818,18 +1818,18 @@
              @exception ArgumentException if the object cannot be converted.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.KeyAgreeRecipientInfo.ToAsn1Object">
-                     * Produce an object suitable for an Asn1OutputStream.
-                     * <pre>
-                     * KeyAgreeRecipientInfo ::= Sequence {
-                     *     version CMSVersion,  -- always set to 3
-                     *     originator [0] EXPLICIT OriginatorIdentifierOrKey,
-                     *     ukm [1] EXPLICIT UserKeyingMaterial OPTIONAL,
-                     *     keyEncryptionAlgorithm KeyEncryptionAlgorithmIdentifier,
-                     *     recipientEncryptedKeys RecipientEncryptedKeys
-                     * }
-            		 *
-            		 * UserKeyingMaterial ::= OCTET STRING
-                     * </pre>
+             Produce an object suitable for an Asn1OutputStream.
+             <pre>
+             KeyAgreeRecipientInfo ::= Sequence {
+                 version CMSVersion,  -- always set to 3
+                 originator [0] EXPLICIT OriginatorIdentifierOrKey,
+                 ukm [1] EXPLICIT UserKeyingMaterial OPTIONAL,
+                 keyEncryptionAlgorithm KeyEncryptionAlgorithmIdentifier,
+                 recipientEncryptedKeys RecipientEncryptedKeys
+             }
+            
+             UserKeyingMaterial ::= OCTET STRING
+             </pre>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.KeyTransRecipientInfo.GetInstance(System.Object)">
              return a KeyTransRecipientInfo object from the given object.
@@ -3422,7 +3422,7 @@
             explicit one as the encoding rules require.
             <p>
             If you use this interface your class should also implement the getInstance
-            pattern which takes a tag object and the tagging mode used. 
+            pattern which takes a tag object and the tagging mode used.
             </p>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IAsn1String">
@@ -3436,7 +3436,7 @@
              CscaMasterList ::= SEQUENCE {
                version                CscaMasterListVersion,
                certList               SET OF Certificate }
-               
+            
              CscaMasterListVersion :: INTEGER {v0(0)}
              </pre>
         </member>
@@ -3500,7 +3500,7 @@
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.IsisMttObjectIdentifiers.IdIsisMttATDateOfCertGen">
              Certificate extensionDate of certificate generation
-             
+            
              <pre>
             		DateOfCertGenSyntax ::= GeneralizedTime
              </pre>
@@ -3525,18 +3525,18 @@
             certificate or as extension in a certificate
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.IsisMttObjectIdentifiers.IdIsisMttATIccsn">
-             
+            
              Serial number of the smart card containing the corresponding private key
-             
+            
              <pre>
             		ICCSNSyntax ::= OCTET STRING (SIZE(8..20))
              </pre>
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.IsisMttObjectIdentifiers.IdIsisMttATPKReference">
-             
+            
              Reference for a file of a smartcard that stores the public key of this
              certificate and that is used as �security anchor�.
-             
+            
              <pre>
             		PKReferenceSyntax ::= OCTET STRING (SIZE(20))
              </pre>
@@ -3545,32 +3545,32 @@
              Some other restriction regarding the usage of this certificate. May be
              used as attribute in attribute certificate or as extension in a
              certificate.
-             
+            
              <pre>
             		RestrictionSyntax ::= DirectoryString (SIZE(1..1024))
              </pre>
-             
+            
              @see Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.Restriction
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.IsisMttObjectIdentifiers.IdIsisMttATRetrieveIfAllowed">
-             
+            
              (Single)Request extension: Clients may include this extension in a
              (single) Request to request the responder to send the certificate in the
              response message along with the status information. Besides the LDAP
              service, this extension provides another mechanism for the distribution
              of certificates, which MAY optionally be provided by certificate
              repositories.
-             
+            
              <pre>
             		RetrieveIfAllowed ::= BOOLEAN
              </pre>
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.IsisMttObjectIdentifiers.IdIsisMttATRequestedCertificate">
-            SingleOCSPResponse extension: The certificate requested by the client by
-            inserting the RetrieveIfAllowed extension in the request, will be
-            returned in this extension.
+             SingleOCSPResponse extension: The certificate requested by the client by
+             inserting the RetrieveIfAllowed extension in the request, will be
+             returned in this extension.
             
-            @see Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.Ocsp.RequestedCertificate
+             @see Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.Ocsp.RequestedCertificate
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.IsisMttObjectIdentifiers.IdIsisMttATNamingAuthorities">
             Base ObjectIdentifier for naming authorities
@@ -3580,7 +3580,7 @@
              in the directory and status information has become available. Currently,
              accrediting authorities enforce that SigG-conforming OCSP servers include
              this extension in the responses.
-             
+            
              <pre>
             		CertInDirSince ::= GeneralizedTime
              </pre>
@@ -3594,20 +3594,20 @@
              <pre>
             		NameAtBirth ::= DirectoryString(SIZE(1..64)
              </pre>
-             
+            
              Used in
              {@link Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.SubjectDirectoryAttributes SubjectDirectoryAttributes}
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.IsisMttObjectIdentifiers.IdIsisMttATAdditionalInformation">
-            Some other information of non-restrictive nature regarding the usage of
-            this certificate. May be used as attribute in atribute certificate or as
-            extension in a certificate.
+             Some other information of non-restrictive nature regarding the usage of
+             this certificate. May be used as attribute in atribute certificate or as
+             extension in a certificate.
             
-            <pre>
-                          AdditionalInformationSyntax ::= DirectoryString (SIZE(1..2048))
-            </pre>
+             <pre>
+                           AdditionalInformationSyntax ::= DirectoryString (SIZE(1..2048))
+             </pre>
             
-            @see Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.AdditionalInformationSyntax
+             @see Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.AdditionalInformationSyntax
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.IsisMttObjectIdentifiers.IdIsisMttATLiabilityLimitationFlag">
              Indicates that an attribute certificate exists, which limits the
@@ -3618,7 +3618,7 @@
              PKC as base certificate) contains some attribute that restricts the
              usability of the PKC too. Attribute certificates with restricting content
              MUST always be included in the signed document.
-             
+            
              <pre>
             		LiabilityLimitationFlagSyntax ::= BOOLEAN
              </pre>
@@ -3733,12 +3733,12 @@
              @return an Asn1Object
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.AdditionalInformationSyntax">
-            Some other information of non-restrictive nature regarding the usage of this
-            certificate.
+             Some other information of non-restrictive nature regarding the usage of this
+             certificate.
             
-            <pre>
-               AdditionalInformationSyntax ::= DirectoryString (SIZE(1..2048))
-            </pre>
+             <pre>
+                AdditionalInformationSyntax ::= DirectoryString (SIZE(1..2048))
+             </pre>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.AdditionalInformationSyntax.#ctor(System.String)">
              Constructor from a given details.
@@ -4103,18 +4103,18 @@
              @return an Asn1Object
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.NamingAuthority">
-            Names of authorities which are responsible for the administration of title
-            registers.
+             Names of authorities which are responsible for the administration of title
+             registers.
             
-            <pre>
-                        NamingAuthority ::= SEQUENCE 
-                        {
-                          namingAuthorityID OBJECT IDENTIFIER OPTIONAL,
-                          namingAuthorityUrl IA5String OPTIONAL,
-                          namingAuthorityText DirectoryString(SIZE(1..128)) OPTIONAL
-                        }
-            </pre>
-            @see Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
+             <pre>
+                         NamingAuthority ::= SEQUENCE
+                         {
+                           namingAuthorityID OBJECT IDENTIFIER OPTIONAL,
+                           namingAuthorityUrl IA5String OPTIONAL,
+                           namingAuthorityText DirectoryString(SIZE(1..128)) OPTIONAL
+                         }
+             </pre>
+             @see Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
             
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.NamingAuthority.IdIsisMttATNamingAuthoritiesRechtWirtschaftSteuern">
@@ -4173,37 +4173,37 @@
              @return an Asn1Object
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.ProcurationSyntax">
-            Attribute to indicate that the certificate holder may sign in the name of a
-            third person.
-            <p>
-            ISIS-MTT PROFILE: The corresponding ProcurationSyntax contains either the
-            name of the person who is represented (subcomponent thirdPerson) or a
-            reference to his/her base certificate (in the component signingFor,
-            subcomponent certRef), furthermore the optional components country and
-            typeSubstitution to indicate the country whose laws apply, and respectively
-            the type of procuration (e.g. manager, procuration, custody).
-            </p>
-            <p>
-            ISIS-MTT PROFILE: The GeneralName MUST be of type directoryName and MAY only
-            contain: - RFC3039 attributes, except pseudonym (countryName, commonName,
-            surname, givenName, serialNumber, organizationName, organizationalUnitName,
-            stateOrProvincename, localityName, postalAddress) and - SubjectDirectoryName
-            attributes (title, dateOfBirth, placeOfBirth, gender, countryOfCitizenship,
-            countryOfResidence and NameAtBirth).
-            </p>
-            <pre>
-                          ProcurationSyntax ::= SEQUENCE {
-                            country [1] EXPLICIT PrintableString(SIZE(2)) OPTIONAL,
-                            typeOfSubstitution [2] EXPLICIT DirectoryString (SIZE(1..128)) OPTIONAL,
-                            signingFor [3] EXPLICIT SigningFor 
-                          }
-                          
-                          SigningFor ::= CHOICE 
-                          { 
-                            thirdPerson GeneralName,
-                            certRef IssuerSerial 
-                          }
-            </pre>
+             Attribute to indicate that the certificate holder may sign in the name of a
+             third person.
+             <p>
+             ISIS-MTT PROFILE: The corresponding ProcurationSyntax contains either the
+             name of the person who is represented (subcomponent thirdPerson) or a
+             reference to his/her base certificate (in the component signingFor,
+             subcomponent certRef), furthermore the optional components country and
+             typeSubstitution to indicate the country whose laws apply, and respectively
+             the type of procuration (e.g. manager, procuration, custody).
+             </p>
+             <p>
+             ISIS-MTT PROFILE: The GeneralName MUST be of type directoryName and MAY only
+             contain: - RFC3039 attributes, except pseudonym (countryName, commonName,
+             surname, givenName, serialNumber, organizationName, organizationalUnitName,
+             stateOrProvincename, localityName, postalAddress) and - SubjectDirectoryName
+             attributes (title, dateOfBirth, placeOfBirth, gender, countryOfCitizenship,
+             countryOfResidence and NameAtBirth).
+             </p>
+             <pre>
+                           ProcurationSyntax ::= SEQUENCE {
+                             country [1] EXPLICIT PrintableString(SIZE(2)) OPTIONAL,
+                             typeOfSubstitution [2] EXPLICIT DirectoryString (SIZE(1..128)) OPTIONAL,
+                             signingFor [3] EXPLICIT SigningFor
+                           }
+            
+                           SigningFor ::= CHOICE
+                           {
+                             thirdPerson GeneralName,
+                             certRef IssuerSerial
+                           }
+             </pre>
             
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.ProcurationSyntax.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Asn1Sequence)">
@@ -4271,20 +4271,20 @@
              @return an Asn1Object
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.ProfessionInfo">
-            Professions, specializations, disciplines, fields of activity, etc.
+             Professions, specializations, disciplines, fields of activity, etc.
             
-            <pre>
-                          ProfessionInfo ::= SEQUENCE 
-                          {
-                            namingAuthority [0] EXPLICIT NamingAuthority OPTIONAL,
-                            professionItems SEQUENCE OF DirectoryString (SIZE(1..128)),
-                            professionOids SEQUENCE OF OBJECT IDENTIFIER OPTIONAL,
-                            registrationNumber PrintableString(SIZE(1..128)) OPTIONAL,
-                            addProfessionInfo OCTET STRING OPTIONAL 
-                          }
-            </pre>
+             <pre>
+                           ProfessionInfo ::= SEQUENCE
+                           {
+                             namingAuthority [0] EXPLICIT NamingAuthority OPTIONAL,
+                             professionItems SEQUENCE OF DirectoryString (SIZE(1..128)),
+                             professionOids SEQUENCE OF OBJECT IDENTIFIER OPTIONAL,
+                             registrationNumber PrintableString(SIZE(1..128)) OPTIONAL,
+                             addProfessionInfo OCTET STRING OPTIONAL
+                           }
+             </pre>
             
-            @see Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
+             @see Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.AdmissionSyntax
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.IsisMtt.X509.ProfessionInfo.Rechtsanwltin">
             Rechtsanw�ltin
@@ -5599,18 +5599,18 @@
             
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.AuthorityKeyIdentifier.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.SubjectPublicKeyInfo)">
-                     *
-                     * Calulates the keyidentifier using a SHA1 hash over the BIT STRING
-                     * from SubjectPublicKeyInfo as defined in RFC2459.
-                     *
-                     * Example of making a AuthorityKeyIdentifier:
-                     * <pre>
-            	     *   SubjectPublicKeyInfo apki = new SubjectPublicKeyInfo((ASN1Sequence)new ASN1InputStream(
-            		 *       publicKey.getEncoded()).readObject());
-                     *   AuthorityKeyIdentifier aki = new AuthorityKeyIdentifier(apki);
-                     * </pre>
-                     *
-                     *
+            
+             Calulates the keyidentifier using a SHA1 hash over the BIT STRING
+             from SubjectPublicKeyInfo as defined in RFC2459.
+            
+             Example of making a AuthorityKeyIdentifier:
+             <pre>
+               SubjectPublicKeyInfo apki = new SubjectPublicKeyInfo((ASN1Sequence)new ASN1InputStream(
+                   publicKey.getEncoded()).readObject());
+               AuthorityKeyIdentifier aki = new AuthorityKeyIdentifier(apki);
+             </pre>
+            
+            
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.AuthorityKeyIdentifier.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.SubjectPublicKeyInfo,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.GeneralNames,Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.BigInteger)">
             create an AuthorityKeyIdentifier with the GeneralNames tag and
@@ -5731,9 +5731,9 @@
             @return Returns the reverse.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.CertificatePolicies.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.PolicyInformation)">
-            Construct a CertificatePolicies object containing one PolicyInformation.
+             Construct a CertificatePolicies object containing one PolicyInformation.
             
-            @param name the name to be contained.
+             @param name the name to be contained.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.CertificatePolicies.ToAsn1Object">
             Produce an object suitable for an ASN1OutputStream.
@@ -6017,78 +6017,78 @@
              @return a DERObject
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder">
-            The Holder object.
-            <p>
-            For an v2 attribute certificate this is:
+             The Holder object.
+             <p>
+             For an v2 attribute certificate this is:
             
-            <pre>
-                       Holder ::= SEQUENCE {
-                             baseCertificateID   [0] IssuerSerial OPTIONAL,
-                                      -- the issuer and serial number of
-                                      -- the holder's Public Key Certificate
-                             entityName          [1] GeneralNames OPTIONAL,
-                                      -- the name of the claimant or role
-                             objectDigestInfo    [2] ObjectDigestInfo OPTIONAL
-                                      -- used to directly authenticate the holder,
-                                      -- for example, an executable
-                       }
-            </pre>
-            </p>
-            <p>
-            For an v1 attribute certificate this is:
+             <pre>
+                        Holder ::= SEQUENCE {
+                              baseCertificateID   [0] IssuerSerial OPTIONAL,
+                                       -- the issuer and serial number of
+                                       -- the holder's Public Key Certificate
+                              entityName          [1] GeneralNames OPTIONAL,
+                                       -- the name of the claimant or role
+                              objectDigestInfo    [2] ObjectDigestInfo OPTIONAL
+                                       -- used to directly authenticate the holder,
+                                       -- for example, an executable
+                        }
+             </pre>
+             </p>
+             <p>
+             For an v1 attribute certificate this is:
             
-            <pre>
-                    subject CHOICE {
-                     baseCertificateID [0] EXPLICIT IssuerSerial,
-                     -- associated with a Public Key Certificate
-                     subjectName [1] EXPLICIT GeneralNames },
-                     -- associated with a name
-            </pre>
-            </p>
+             <pre>
+                     subject CHOICE {
+                      baseCertificateID [0] EXPLICIT IssuerSerial,
+                      -- associated with a Public Key Certificate
+                      subjectName [1] EXPLICIT GeneralNames },
+                      -- associated with a name
+             </pre>
+             </p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Asn1TaggedObject)">
-            Constructor for a holder for an v1 attribute certificate.
+             Constructor for a holder for an v1 attribute certificate.
             
-            @param tagObj The ASN.1 tagged holder object.
+             @param tagObj The ASN.1 tagged holder object.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Asn1Sequence)">
-            Constructor for a holder for an v2 attribute certificate. *
+             Constructor for a holder for an v2 attribute certificate. *
             
-            @param seq The ASN.1 sequence.
+             @param seq The ASN.1 sequence.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.IssuerSerial,System.Int32)">
             Constructs a holder from a IssuerSerial.
             @param baseCertificateID The IssuerSerial.
-            @param version The version of the attribute certificate. 
+            @param version The version of the attribute certificate.
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder.Version">
             Returns 1 for v2 attribute certificates or 0 for v1 attribute
-            certificates. 
+            certificates.
             @return The version of the attribute certificate.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.GeneralNames)">
-            Constructs a holder with an entityName for v2 attribute certificates or
-            with a subjectName for v1 attribute certificates.
+             Constructs a holder with an entityName for v2 attribute certificates or
+             with a subjectName for v1 attribute certificates.
             
-            @param entityName The entity or subject name.
+             @param entityName The entity or subject name.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.GeneralNames,System.Int32)">
-            Constructs a holder with an entityName for v2 attribute certificates or
-            with a subjectName for v1 attribute certificates.
+             Constructs a holder with an entityName for v2 attribute certificates or
+             with a subjectName for v1 attribute certificates.
             
-            @param entityName The entity or subject name.
-            @param version The version of the attribute certificate. 
+             @param entityName The entity or subject name.
+             @param version The version of the attribute certificate.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.ObjectDigestInfo)">
-            Constructs a holder from an object digest info.
+             Constructs a holder from an object digest info.
             
-            @param objectDigestInfo The object digest info object.
+             @param objectDigestInfo The object digest info object.
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder.EntityName">
-            Returns the entityName for an v2 attribute certificate or the subjectName
-            for an v1 attribute certificate.
+             Returns the entityName for an v2 attribute certificate or the subjectName
+             for an v1 attribute certificate.
             
-            @return The entityname or subjectname.
+             @return The entityname or subjectname.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Holder.ToAsn1Object">
             The Holder object.
@@ -6138,29 +6138,29 @@
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.IssuingDistributionPoint">
             <pre>
-            IssuingDistributionPoint ::= SEQUENCE { 
-              distributionPoint          [0] DistributionPointName OPTIONAL, 
-              onlyContainsUserCerts      [1] BOOLEAN DEFAULT FALSE, 
-              onlyContainsCACerts        [2] BOOLEAN DEFAULT FALSE, 
-              onlySomeReasons            [3] ReasonFlags OPTIONAL, 
+            IssuingDistributionPoint ::= SEQUENCE {
+              distributionPoint          [0] DistributionPointName OPTIONAL,
+              onlyContainsUserCerts      [1] BOOLEAN DEFAULT FALSE,
+              onlyContainsCACerts        [2] BOOLEAN DEFAULT FALSE,
+              onlySomeReasons            [3] ReasonFlags OPTIONAL,
               indirectCRL                [4] BOOLEAN DEFAULT FALSE,
               onlyContainsAttributeCerts [5] BOOLEAN DEFAULT FALSE }
             </pre>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.IssuingDistributionPoint.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.DistributionPointName,System.Boolean,System.Boolean,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.ReasonFlags,System.Boolean,System.Boolean)">
-            Constructor from given details.
+             Constructor from given details.
             
-            @param distributionPoint
-                       May contain an URI as pointer to most current CRL.
-            @param onlyContainsUserCerts Covers revocation information for end certificates.
-            @param onlyContainsCACerts Covers revocation information for CA certificates.
+             @param distributionPoint
+                        May contain an URI as pointer to most current CRL.
+             @param onlyContainsUserCerts Covers revocation information for end certificates.
+             @param onlyContainsCACerts Covers revocation information for CA certificates.
             
-            @param onlySomeReasons
-                       Which revocation reasons does this point cover.
-            @param indirectCRL
-                       If <code>true</code> then the CRL contains revocation
-                       information about certificates ssued by other CAs.
-            @param onlyContainsAttributeCerts Covers revocation information for attribute certificates.
+             @param onlySomeReasons
+                        Which revocation reasons does this point cover.
+             @param indirectCRL
+                        If <code>true</code> then the CRL contains revocation
+                        information about certificates ssued by other CAs.
+             @param onlyContainsAttributeCerts Covers revocation information for attribute certificates.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.IssuingDistributionPoint.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Asn1Sequence)">
             Constructor from Asn1Sequence
@@ -6265,23 +6265,23 @@
              @return a <code>Asn1Object</code> value
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.ObjectDigestInfo">
-            ObjectDigestInfo ASN.1 structure used in v2 attribute certificates.
+             ObjectDigestInfo ASN.1 structure used in v2 attribute certificates.
             
-            <pre>
-             
-               ObjectDigestInfo ::= SEQUENCE {
-                    digestedObjectType  ENUMERATED {
-                            publicKey            (0),
-                            publicKeyCert        (1),
-                            otherObjectTypes     (2) },
-                                    -- otherObjectTypes MUST NOT
-                                    -- be used in this profile
-                    otherObjectTypeID   OBJECT IDENTIFIER OPTIONAL,
-                    digestAlgorithm     AlgorithmIdentifier,
-                    objectDigest        BIT STRING
-               }
-              
-            </pre>
+             <pre>
+            
+                ObjectDigestInfo ::= SEQUENCE {
+                     digestedObjectType  ENUMERATED {
+                             publicKey            (0),
+                             publicKeyCert        (1),
+                             otherObjectTypes     (2) },
+                                     -- otherObjectTypes MUST NOT
+                                     -- be used in this profile
+                     otherObjectTypeID   OBJECT IDENTIFIER OPTIONAL,
+                     digestAlgorithm     AlgorithmIdentifier,
+                     objectDigest        BIT STRING
+                }
+            
+             </pre>
             
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.ObjectDigestInfo.PublicKey">
@@ -6294,36 +6294,36 @@
             An other object is hashed.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.ObjectDigestInfo.#ctor(System.Int32,System.String,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.AlgorithmIdentifier,System.Byte[])">
-            Constructor from given details.
-            <p>
-            If <code>digestedObjectType</code> is not {@link #publicKeyCert} or
-            {@link #publicKey} <code>otherObjectTypeID</code> must be given,
-            otherwise it is ignored.</p>
+             Constructor from given details.
+             <p>
+             If <code>digestedObjectType</code> is not {@link #publicKeyCert} or
+             {@link #publicKey} <code>otherObjectTypeID</code> must be given,
+             otherwise it is ignored.</p>
             
-            @param digestedObjectType The digest object type.
-            @param otherObjectTypeID The object type ID for
-                       <code>otherObjectDigest</code>.
-            @param digestAlgorithm The algorithm identifier for the hash.
-            @param objectDigest The hash value.
+             @param digestedObjectType The digest object type.
+             @param otherObjectTypeID The object type ID for
+                        <code>otherObjectDigest</code>.
+             @param digestAlgorithm The algorithm identifier for the hash.
+             @param objectDigest The hash value.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.ObjectDigestInfo.ToAsn1Object">
-            Produce an object suitable for an Asn1OutputStream.
+             Produce an object suitable for an Asn1OutputStream.
             
-            <pre>
-             
-               ObjectDigestInfo ::= SEQUENCE {
-                    digestedObjectType  ENUMERATED {
-                            publicKey            (0),
-                            publicKeyCert        (1),
-                            otherObjectTypes     (2) },
-                                    -- otherObjectTypes MUST NOT
-                                    -- be used in this profile
-                    otherObjectTypeID   OBJECT IDENTIFIER OPTIONAL,
-                    digestAlgorithm     AlgorithmIdentifier,
-                    objectDigest        BIT STRING
-               }
-              
-            </pre>
+             <pre>
+            
+                ObjectDigestInfo ::= SEQUENCE {
+                     digestedObjectType  ENUMERATED {
+                             publicKey            (0),
+                             publicKeyCert        (1),
+                             otherObjectTypes     (2) },
+                                     -- otherObjectTypes MUST NOT
+                                     -- be used in this profile
+                     otherObjectTypeID   OBJECT IDENTIFIER OPTIONAL,
+                     digestAlgorithm     AlgorithmIdentifier,
+                     objectDigest        BIT STRING
+                }
+            
+             </pre>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.OtherName">
             The OtherName object.
@@ -6595,19 +6595,19 @@
             </pre>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.SigI.NameOrPseudonym">
-            Structure for a name or pseudonym.
+             Structure for a name or pseudonym.
             
-            <pre>
-                  NameOrPseudonym ::= CHOICE {
-                	   surAndGivenName SEQUENCE {
-                	     surName DirectoryString,
-                	     givenName SEQUENCE OF DirectoryString 
-                    },
-                	   pseudonym DirectoryString 
-                  }
-            </pre>
+             <pre>
+                   NameOrPseudonym ::= CHOICE {
+                 	   surAndGivenName SEQUENCE {
+                 	     surName DirectoryString,
+                 	     givenName SEQUENCE OF DirectoryString
+                     },
+                 	   pseudonym DirectoryString
+                   }
+             </pre>
             
-            @see org.bouncycastle.asn1.x509.sigi.PersonalData
+             @see org.bouncycastle.asn1.x509.sigi.PersonalData
             
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.SigI.NameOrPseudonym.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X500.DirectoryString)">
@@ -6887,36 +6887,36 @@
             </pre>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Target">
-            Target structure used in target information extension for attribute
-            certificates from RFC 3281.
+             Target structure used in target information extension for attribute
+             certificates from RFC 3281.
             
-            <pre>
-                Target  ::= CHOICE {
-                  targetName          [0] GeneralName,
-                  targetGroup         [1] GeneralName,
-                  targetCert          [2] TargetCert
-                }
-            </pre>
+             <pre>
+                 Target  ::= CHOICE {
+                   targetName          [0] GeneralName,
+                   targetGroup         [1] GeneralName,
+                   targetCert          [2] TargetCert
+                 }
+             </pre>
             
-            <p>
-            The targetCert field is currently not supported and must not be used
-            according to RFC 3281.</p>
+             <p>
+             The targetCert field is currently not supported and must not be used
+             according to RFC 3281.</p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Target.GetInstance(System.Object)">
-            Creates an instance of a Target from the given object.
-            <p>
-            <code>obj</code> can be a Target or a {@link Asn1TaggedObject}</p>
+             Creates an instance of a Target from the given object.
+             <p>
+             <code>obj</code> can be a Target or a {@link Asn1TaggedObject}</p>
             
-            @param obj The object.
-            @return A Target instance.
-            @throws ArgumentException if the given object cannot be
-                        interpreted as Target.
+             @param obj The object.
+             @return A Target instance.
+             @throws ArgumentException if the given object cannot be
+                         interpreted as Target.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Target.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Asn1TaggedObject)">
-            Constructor from Asn1TaggedObject.
+             Constructor from Asn1TaggedObject.
             
-            @param tagObj The tagged object.
-            @throws ArgumentException if the encoding is wrong.
+             @param tagObj The tagged object.
+             @throws ArgumentException if the encoding is wrong.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Target.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Target.Choice,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.GeneralName)">
              Constructor from given details.
@@ -6934,57 +6934,57 @@
             @return Returns the targetName.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Target.ToAsn1Object">
-            Produce an object suitable for an Asn1OutputStream.
+             Produce an object suitable for an Asn1OutputStream.
             
-            Returns:
+             Returns:
             
-            <pre>
-                Target  ::= CHOICE {
-                  targetName          [0] GeneralName,
-                  targetGroup         [1] GeneralName,
-                  targetCert          [2] TargetCert
-                }
-            </pre>
+             <pre>
+                 Target  ::= CHOICE {
+                   targetName          [0] GeneralName,
+                   targetGroup         [1] GeneralName,
+                   targetCert          [2] TargetCert
+                 }
+             </pre>
             
-            @return an Asn1Object
+             @return an Asn1Object
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.TargetInformation">
-            Target information extension for attributes certificates according to RFC
-            3281.
+             Target information extension for attributes certificates according to RFC
+             3281.
             
-            <pre>
-                      SEQUENCE OF Targets
-            </pre>
+             <pre>
+                       SEQUENCE OF Targets
+             </pre>
             
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.TargetInformation.GetInstance(System.Object)">
-            Creates an instance of a TargetInformation from the given object.
-            <p>
-            <code>obj</code> can be a TargetInformation or a {@link Asn1Sequence}</p>
+             Creates an instance of a TargetInformation from the given object.
+             <p>
+             <code>obj</code> can be a TargetInformation or a {@link Asn1Sequence}</p>
             
-            @param obj The object.
-            @return A TargetInformation instance.
-            @throws ArgumentException if the given object cannot be interpreted as TargetInformation.
+             @param obj The object.
+             @return A TargetInformation instance.
+             @throws ArgumentException if the given object cannot be interpreted as TargetInformation.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.TargetInformation.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Asn1Sequence)">
-            Constructor from a Asn1Sequence.
+             Constructor from a Asn1Sequence.
             
-            @param seq The Asn1Sequence.
-            @throws ArgumentException if the sequence does not contain
-                        correctly encoded Targets elements.
+             @param seq The Asn1Sequence.
+             @throws ArgumentException if the sequence does not contain
+                         correctly encoded Targets elements.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.TargetInformation.GetTargetsObjects">
-            Returns the targets in this target information extension.
-            <p>
-            The ArrayList is cloned before it is returned.</p>
+             Returns the targets in this target information extension.
+             <p>
+             The ArrayList is cloned before it is returned.</p>
             
-            @return Returns the targets.
+             @return Returns the targets.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.TargetInformation.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Targets)">
-            Constructs a target information from a single targets element. 
-            According to RFC 3281 only one targets element must be produced.
+             Constructs a target information from a single targets element.
+             According to RFC 3281 only one targets element must be produced.
             
-            @param targets A Targets instance.
+             @param targets A Targets instance.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.TargetInformation.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Target[])">
              According to RFC 3281 only one targets element must be produced. If
@@ -6994,87 +6994,87 @@
              @param targets An array with {@link Targets}.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.TargetInformation.ToAsn1Object">
-            Produce an object suitable for an Asn1OutputStream.
+             Produce an object suitable for an Asn1OutputStream.
             
-            Returns:
+             Returns:
             
-            <pre>
-                     SEQUENCE OF Targets
-            </pre>
+             <pre>
+                      SEQUENCE OF Targets
+             </pre>
             
-            <p>
-            According to RFC 3281 only one targets element must be produced. If
-            multiple targets are given in the constructor they are merged into one
-            targets element. If this was produced from a
-            {@link Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Asn1Sequence} the encoding is kept.</p>
+             <p>
+             According to RFC 3281 only one targets element must be produced. If
+             multiple targets are given in the constructor they are merged into one
+             targets element. If this was produced from a
+             {@link Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Asn1Sequence} the encoding is kept.</p>
             
-            @return an Asn1Object
+             @return an Asn1Object
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Targets">
-            Targets structure used in target information extension for attribute
-            certificates from RFC 3281.
+             Targets structure used in target information extension for attribute
+             certificates from RFC 3281.
             
-            <pre>
-                       Targets ::= SEQUENCE OF Target
-                      
-                       Target  ::= CHOICE {
-                         targetName          [0] GeneralName,
-                         targetGroup         [1] GeneralName,
-                         targetCert          [2] TargetCert
-                       }
-                      
-                       TargetCert  ::= SEQUENCE {
-                         targetCertificate    IssuerSerial,
-                         targetName           GeneralName OPTIONAL,
-                         certDigestInfo       ObjectDigestInfo OPTIONAL
-                       }
-            </pre>
+             <pre>
+                        Targets ::= SEQUENCE OF Target
             
-            @see org.bouncycastle.asn1.x509.Target
-            @see org.bouncycastle.asn1.x509.TargetInformation
+                        Target  ::= CHOICE {
+                          targetName          [0] GeneralName,
+                          targetGroup         [1] GeneralName,
+                          targetCert          [2] TargetCert
+                        }
+            
+                        TargetCert  ::= SEQUENCE {
+                          targetCertificate    IssuerSerial,
+                          targetName           GeneralName OPTIONAL,
+                          certDigestInfo       ObjectDigestInfo OPTIONAL
+                        }
+             </pre>
+            
+             @see org.bouncycastle.asn1.x509.Target
+             @see org.bouncycastle.asn1.x509.TargetInformation
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Targets.GetInstance(System.Object)">
-            Creates an instance of a Targets from the given object.
-            <p>
-            <code>obj</code> can be a Targets or a {@link Asn1Sequence}</p>
+             Creates an instance of a Targets from the given object.
+             <p>
+             <code>obj</code> can be a Targets or a {@link Asn1Sequence}</p>
             
-            @param obj The object.
-            @return A Targets instance.
-            @throws ArgumentException if the given object cannot be interpreted as Target.
+             @param obj The object.
+             @return A Targets instance.
+             @throws ArgumentException if the given object cannot be interpreted as Target.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Targets.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Asn1Sequence)">
-            Constructor from Asn1Sequence.
+             Constructor from Asn1Sequence.
             
-            @param targets The ASN.1 SEQUENCE.
-            @throws ArgumentException if the contents of the sequence are
-                        invalid.
+             @param targets The ASN.1 SEQUENCE.
+             @throws ArgumentException if the contents of the sequence are
+                         invalid.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Targets.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Target[])">
-            Constructor from given targets.
-            <p>
-            The ArrayList is copied.</p>
+             Constructor from given targets.
+             <p>
+             The ArrayList is copied.</p>
             
-            @param targets An <code>ArrayList</code> of {@link Target}s.
-            @see Target
-            @throws ArgumentException if the ArrayList contains not only Targets.
+             @param targets An <code>ArrayList</code> of {@link Target}s.
+             @see Target
+             @throws ArgumentException if the ArrayList contains not only Targets.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Targets.GetTargets">
-            Returns the targets in an <code>ArrayList</code>.
-            <p>
-            The ArrayList is cloned before it is returned.</p>
+             Returns the targets in an <code>ArrayList</code>.
+             <p>
+             The ArrayList is cloned before it is returned.</p>
             
-            @return Returns the targets.
+             @return Returns the targets.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.Targets.ToAsn1Object">
-            Produce an object suitable for an Asn1OutputStream.
+             Produce an object suitable for an Asn1OutputStream.
             
-            Returns:
+             Returns:
             
-            <pre>
-                       Targets ::= SEQUENCE OF Target
-            </pre>
+             <pre>
+                        Targets ::= SEQUENCE OF Target
+             </pre>
             
-            @return an Asn1Object
+             @return an Asn1Object
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.TbsCertificateStructure">
             The TbsCertificate object.
@@ -7697,44 +7697,44 @@
              @param oidSymbols look up table strings for oids.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.X509NameEntryConverter">
-                 * It turns out that the number of standard ways the fields in a DN should be
-                 * encoded into their ASN.1 counterparts is rapidly approaching the
-                 * number of machines on the internet. By default the X509Name class
-                 * will produce UTF8Strings in line with the current recommendations (RFC 3280).
-                 * <p>
-                 * An example of an encoder look like below:
-                 * <pre>
-                 * public class X509DirEntryConverter
-                 *     : X509NameEntryConverter
-                 * {
-                 *     public Asn1Object GetConvertedValue(
-                 *         DerObjectIdentifier  oid,
-                 *         string               value)
-                 *     {
-                 *         if (str.Length() != 0 &amp;&amp; str.charAt(0) == '#')
-                 *         {
-                 *             return ConvertHexEncoded(str, 1);
-                 *         }
-                 *         if (oid.Equals(EmailAddress))
-                 *         {
-                 *             return new DerIA5String(str);
-                 *         }
-                 *         else if (CanBePrintable(str))
-                 *         {
-                 *             return new DerPrintableString(str);
-                 *         }
-                 *         else if (CanBeUTF8(str))
-                 *         {
-                 *             return new DerUtf8String(str);
-                 *         }
-                 *         else
-                 *         {
-                 *             return new DerBmpString(str);
-                 *         }
-                 *     }
-                 * }
-            	 * </pre>
-            	 * </p>
+            It turns out that the number of standard ways the fields in a DN should be
+            encoded into their ASN.1 counterparts is rapidly approaching the
+            number of machines on the internet. By default the X509Name class
+            will produce UTF8Strings in line with the current recommendations (RFC 3280).
+            <p>
+            An example of an encoder look like below:
+            <pre>
+            public class X509DirEntryConverter
+                : X509NameEntryConverter
+            {
+                public Asn1Object GetConvertedValue(
+                    DerObjectIdentifier  oid,
+                    string               value)
+                {
+                    if (str.Length() != 0 &amp;&amp; str.charAt(0) == '#')
+                    {
+                        return ConvertHexEncoded(str, 1);
+                    }
+                    if (oid.Equals(EmailAddress))
+                    {
+                        return new DerIA5String(str);
+                    }
+                    else if (CanBePrintable(str))
+                    {
+                        return new DerPrintableString(str);
+                    }
+                    else if (CanBeUTF8(str))
+                    {
+                        return new DerUtf8String(str);
+                    }
+                    else
+                    {
+                        return new DerBmpString(str);
+                    }
+                }
+            }
+            </pre>
+            </p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.X509NameEntryConverter.ConvertHexEncoded(System.String,System.Int32)">
              Convert an inline encoded hex string rendition of an ASN.1
@@ -8475,8 +8475,8 @@
              @return byte[]
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Bcpg.SignaturePacket.GetSignature">
-            		* return the signature as a set of integers - note this is normalised to be the
-                    * ASN.1 encoding of what appears in the signature packet.
+            return the signature as a set of integers - note this is normalised to be the
+            ASN.1 encoding of what appears in the signature packet.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Bcpg.SignaturePacket.GetSignatureBytes">
             Return the byte encoding of the signature section.
@@ -8632,7 +8632,7 @@
             return a store of the intended recipients for this message
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsAuthenticatedData.ContentInfo">
-            return the ContentInfo 
+            return the ContentInfo
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsAuthenticatedData.GetAuthAttrs">
             return a table of the digested attributes indexed by
@@ -8795,21 +8795,21 @@
              @throws CMSException if there is an exception uncompressing the data.
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsCompressedData.ContentInfo">
-            return the ContentInfo 
+            return the ContentInfo
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsCompressedData.GetEncoded">
             return the ASN.1 encoded representation of this object.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsCompressedDataGenerator">
-                * General class for generating a compressed CMS message.
-                * <p>
-                * A simple example of usage.</p>
-                * <p>
-                * <pre>
-                *      CMSCompressedDataGenerator fact = new CMSCompressedDataGenerator();
-                *      CMSCompressedData data = fact.Generate(content, algorithm);
-                * </pre>
-            	* </p>
+            General class for generating a compressed CMS message.
+            <p>
+            A simple example of usage.</p>
+            <p>
+            <pre>
+                 CMSCompressedDataGenerator fact = new CMSCompressedDataGenerator();
+                 CMSCompressedData data = fact.Generate(content, algorithm);
+            </pre>
+            </p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsCompressedDataGenerator.Generate(Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsProcessable,System.String)">
             Generate an object that contains an CMS Compressed Data
@@ -8865,7 +8865,7 @@
             return a store of the intended recipients for this message
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsEnvelopedData.ContentInfo">
-            return the ContentInfo 
+            return the ContentInfo
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsEnvelopedData.GetUnprotectedAttributes">
             return a table of the unprotected attributes indexed by
@@ -9185,34 +9185,34 @@
              @exception CmsException if there is an error processing the stores
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsSignedDataGenerator">
-                 * general class for generating a pkcs7-signature message.
-                 * <p>
-                 * A simple example of usage.
-                 *
-                 * <pre>
-                 *      IX509Store certs...
-                 *      IX509Store crls...
-                 *      CmsSignedDataGenerator gen = new CmsSignedDataGenerator();
-                 *
-                 *      gen.AddSigner(privKey, cert, CmsSignedGenerator.DigestSha1);
-                 *      gen.AddCertificates(certs);
-                 *      gen.AddCrls(crls);
-                 *
-                 *      CmsSignedData data = gen.Generate(content);
-                 * </pre>
-            	 * </p>
+             general class for generating a pkcs7-signature message.
+             <p>
+             A simple example of usage.
+            
+             <pre>
+                  IX509Store certs...
+                  IX509Store crls...
+                  CmsSignedDataGenerator gen = new CmsSignedDataGenerator();
+            
+                  gen.AddSigner(privKey, cert, CmsSignedGenerator.DigestSha1);
+                  gen.AddCertificates(certs);
+                  gen.AddCrls(crls);
+            
+                  CmsSignedData data = gen.Generate(content);
+             </pre>
+             </p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsSignedDataGenerator.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Security.SecureRandom)">
             <summary>Constructor allowing specific source of randomness</summary>
             <param name="random">Instance of <c>SecureRandom</c> to use.</param>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsSignedDataGenerator.AddSigner(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.AsymmetricKeyParameter,Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509Certificate,System.String)">
-                    * add a signer - no attributes other than the default ones will be
-                    * provided here.
-            		*
-            		* @param key signing key to use
-            		* @param cert certificate containing corresponding public key
-            		* @param digestOID digest algorithm OID
+             add a signer - no attributes other than the default ones will be
+             provided here.
+            
+             @param key signing key to use
+             @param cert certificate containing corresponding public key
+             @param digestOID digest algorithm OID
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsSignedDataGenerator.AddSigner(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.AsymmetricKeyParameter,Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509Certificate,System.String,System.String)">
              add a signer, specifying the digest encryption algorithm to use - no attributes other than the default ones will be
@@ -9232,13 +9232,13 @@
             provided here.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsSignedDataGenerator.AddSigner(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.AsymmetricKeyParameter,Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509Certificate,System.String,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.AttributeTable,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.AttributeTable)">
-                    * add a signer with extra signed/unsigned attributes.
-            		*
-            		* @param key signing key to use
-            		* @param cert certificate containing corresponding public key
-            		* @param digestOID digest algorithm OID
-            		* @param signedAttr table of attributes to be included in signature
-            		* @param unsignedAttr table of attributes to be included as unsigned
+             add a signer with extra signed/unsigned attributes.
+            
+             @param key signing key to use
+             @param cert certificate containing corresponding public key
+             @param digestOID digest algorithm OID
+             @param signedAttr table of attributes to be included in signature
+             @param unsignedAttr table of attributes to be included as unsigned
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsSignedDataGenerator.AddSigner(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.AsymmetricKeyParameter,Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509Certificate,System.String,System.String,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.AttributeTable,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.AttributeTable)">
              add a signer, specifying the digest encryption algorithm, with extra signed/unsigned attributes.
@@ -9251,13 +9251,13 @@
              @param unsignedAttr table of attributes to be included as unsigned
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsSignedDataGenerator.AddSigner(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.AsymmetricKeyParameter,System.Byte[],System.String,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.AttributeTable,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.AttributeTable)">
-            	     * add a signer with extra signed/unsigned attributes.
-            		 *
-            		 * @param key signing key to use
-            		 * @param subjectKeyID subjectKeyID of corresponding public key
-            		 * @param digestOID digest algorithm OID
-            		 * @param signedAttr table of attributes to be included in signature
-            		 * @param unsignedAttr table of attributes to be included as unsigned
+             add a signer with extra signed/unsigned attributes.
+            
+             @param key signing key to use
+             @param subjectKeyID subjectKeyID of corresponding public key
+             @param digestOID digest algorithm OID
+             @param signedAttr table of attributes to be included in signature
+             @param unsignedAttr table of attributes to be included as unsigned
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.CmsSignedDataGenerator.AddSigner(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.AsymmetricKeyParameter,System.Byte[],System.String,System.String,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.AttributeTable,Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.Cms.AttributeTable)">
              add a signer, specifying the digest encryption algorithm, with extra signed/unsigned attributes.
@@ -9680,15 +9680,15 @@
             <exception cref="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Security.GeneralSecurityException"></exception>
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.RecipientInformation.KeyEncryptionAlgOid">
-                    * return the object identifier for the key encryption algorithm.
-                    * 
-            		* @return OID for key encryption algorithm.
+             return the object identifier for the key encryption algorithm.
+            
+             @return OID for key encryption algorithm.
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.RecipientInformation.KeyEncryptionAlgParams">
-                    * return the ASN.1 encoded key encryption algorithm parameters, or null if
-                    * there aren't any.
-                    * 
-            		* @return ASN.1 encoding of key encryption algorithm parameters.
+             return the ASN.1 encoded key encryption algorithm parameters, or null if
+             there aren't any.
+            
+             @return ASN.1 encoding of key encryption algorithm parameters.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Cms.RecipientInformation.GetMac">
              Return the MAC calculated for the content stream. Note: this call is only meaningful once all
@@ -10880,7 +10880,7 @@
             To be called after calculating the secret S.
             @param M1: the client side generated evidence message
             @return A boolean indicating if the client message M1 was the expected one.
-            @throws CryptoException 
+            @throws CryptoException
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Agreement.Srp.Srp6Server.CalculateServerEvidenceMessage">
             Computes the server evidence message M2 using the previously verified values.
@@ -12504,37 +12504,37 @@
              @param cipher
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Encodings.Pkcs1Encoding.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.IAsymmetricBlockCipher,System.Int32)">
-            Constructor for decryption with a fixed plaintext length.
+             Constructor for decryption with a fixed plaintext length.
             
-            @param cipher The cipher to use for cryptographic operation.
-            @param pLen Length of the expected plaintext.
+             @param cipher The cipher to use for cryptographic operation.
+             @param pLen Length of the expected plaintext.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Encodings.Pkcs1Encoding.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.IAsymmetricBlockCipher,System.Byte[])">
-            Constructor for decryption with a fixed plaintext length and a fallback
-            value that is returned, if the padding is incorrect.
+             Constructor for decryption with a fixed plaintext length and a fallback
+             value that is returned, if the padding is incorrect.
             
-            @param cipher
-                       The cipher to use for cryptographic operation.
-            @param fallback
-                       The fallback value, we don't to a arraycopy here.
+             @param cipher
+                        The cipher to use for cryptographic operation.
+             @param fallback
+                        The fallback value, we don't to a arraycopy here.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Encodings.Pkcs1Encoding.CheckPkcs1Encoding(System.Byte[],System.Int32)">
-            Checks if the argument is a correctly PKCS#1.5 encoded Plaintext
-            for encryption.
+             Checks if the argument is a correctly PKCS#1.5 encoded Plaintext
+             for encryption.
             
-            @param encoded The Plaintext.
-            @param pLen Expected length of the plaintext.
-            @return Either 0, if the encoding is correct, or -1, if it is incorrect.
+             @param encoded The Plaintext.
+             @param pLen Expected length of the plaintext.
+             @return Either 0, if the encoding is correct, or -1, if it is incorrect.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Encodings.Pkcs1Encoding.DecodeBlockOrRandom(System.Byte[],System.Int32,System.Int32)">
-            Decode PKCS#1.5 encoding, and return a random value if the padding is not correct.
+             Decode PKCS#1.5 encoding, and return a random value if the padding is not correct.
             
-            @param in The encrypted block.
-            @param inOff Offset in the encrypted block.
-            @param inLen Length of the encrypted block.
-            @param pLen Length of the desired output.
-            @return The plaintext without padding, or a random value if the padding was incorrect.
-            @throws InvalidCipherTextException
+             @param in The encrypted block.
+             @param inOff Offset in the encrypted block.
+             @param inLen Length of the encrypted block.
+             @param pLen Length of the desired output.
+             @return The plaintext without padding, or a random value if the padding was incorrect.
+             @throws InvalidCipherTextException
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Encodings.Pkcs1Encoding.DecodeBlock(System.Byte[],System.Int32,System.Int32)">
             @exception InvalidCipherTextException if the decrypted block is not in Pkcs1 format.
@@ -12631,9 +12631,9 @@
             </remarks>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.AriaEngine">
-            RFC 5794.
+             RFC 5794.
             
-            ARIA is a 128-bit block cipher with 128-, 192-, and 256-bit keys.
+             ARIA is a 128-bit block cipher with 128-, 192-, and 256-bit keys.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.BlowfishEngine">
             A class that provides Blowfish key encryption operations,
@@ -12783,18 +12783,18 @@
              inappropriate.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.DesEdeWrapEngine">
-                * Wrap keys according to
-                * <a href="http://www.ietf.org/internet-drafts/draft-ietf-smime-key-wrap-01.txt">
-                * draft-ietf-smime-key-wrap-01.txt</a>.
-                * <p>
-                * Note:
-                * <ul>
-                * <li>this is based on a draft, and as such is subject to change - don't use this class for anything requiring long term storage.</li>
-                * <li>if you are using this to wrap triple-des keys you need to set the
-                * parity bits on the key and, if it's a two-key triple-des key, pad it
-                * yourself.</li>
-                * </ul>
-            	* </p>
+            Wrap keys according to
+            <a href="http://www.ietf.org/internet-drafts/draft-ietf-smime-key-wrap-01.txt">
+            draft-ietf-smime-key-wrap-01.txt</a>.
+            <p>
+            Note:
+            <ul>
+            <li>this is based on a draft, and as such is subject to change - don't use this class for anything requiring long term storage.</li>
+            <li>if you are using this to wrap triple-des keys you need to set the
+            parity bits on the key and, if it's a two-key triple-des key, pad it
+            yourself.</li>
+            </ul>
+            </p>
         </member>
         <member name="F:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.DesEdeWrapEngine.engine">
             Field engine 
@@ -13005,18 +13005,18 @@
                                               inappropriate (ie. the key is not 128 bit long).
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.HC256Engine">
-            HC-256 is a software-efficient stream cipher created by Hongjun Wu. It 
-            generates keystream from a 256-bit secret key and a 256-bit initialization 
-            vector.
-            <p>
-            http://www.ecrypt.eu.org/stream/p3ciphers/hc/hc256_p3.pdf
-            </p><p>
-            Its brother, HC-128, is a third phase candidate in the eStream contest.
-            The algorithm is patent-free. No attacks are known as of today (April 2007). 
-            See
+             HC-256 is a software-efficient stream cipher created by Hongjun Wu. It
+             generates keystream from a 256-bit secret key and a 256-bit initialization
+             vector.
+             <p>
+             http://www.ecrypt.eu.org/stream/p3ciphers/hc/hc256_p3.pdf
+             </p><p>
+             Its brother, HC-128, is a third phase candidate in the eStream contest.
+             The algorithm is patent-free. No attacks are known as of today (April 2007).
+             See
             
-            http://www.ecrypt.eu.org/stream/hcp3.html
-            </p>
+             http://www.ecrypt.eu.org/stream/hcp3.html
+             </p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.HC256Engine.Init(System.Boolean,Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.ICipherParameters)">
              Initialise a HC-256 cipher.
@@ -13576,16 +13576,16 @@
             </remarks>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.SerpentEngine">
-                 * Serpent is a 128-bit 32-round block cipher with variable key lengths,
-                 * including 128, 192 and 256 bit keys conjectured to be at least as
-                 * secure as three-key triple-DES.
-                 * <p>
-                 * Serpent was designed by Ross Anderson, Eli Biham and Lars Knudsen as a
-                 * candidate algorithm for the NIST AES Quest.
-            	 * </p>
-                 * <p>
-                 * For full details see <a href="http://www.cl.cam.ac.uk/~rja14/serpent.html">The Serpent home page</a>
-            	 * </p>
+            Serpent is a 128-bit 32-round block cipher with variable key lengths,
+            including 128, 192 and 256 bit keys conjectured to be at least as
+            secure as three-key triple-DES.
+            <p>
+            Serpent was designed by Ross Anderson, Eli Biham and Lars Knudsen as a
+            candidate algorithm for the NIST AES Quest.
+            </p>
+            <p>
+            For full details see <a href="http://www.cl.cam.ac.uk/~rja14/serpent.html">The Serpent home page</a>
+            </p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.SerpentEngine.MakeWorkingKey(System.Byte[])">
              Expand a user-supplied key material into a session key.
@@ -13924,23 +13924,23 @@
              @return     Remainder polynomial Generated using RS code
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.TwofishEngine.RS_rem(System.Int32)">
-                    * Reed-Solomon code parameters: (12,8) reversible code:
-            		* <p>
-                    * <pre>
-                    * G(x) = x^4 + (a+1/a)x^3 + ax^2 + (a+1/a)x + 1
-                    * </pre>
-                    * where a = primitive root of field generator 0x14D
-            		* </p>
+            Reed-Solomon code parameters: (12,8) reversible code:
+            <p>
+            <pre>
+            G(x) = x^4 + (a+1/a)x^3 + ax^2 + (a+1/a)x + 1
+            </pre>
+            where a = primitive root of field generator 0x14D
+            </p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.VmpcEngine.Init(System.Boolean,Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.ICipherParameters)">
-            initialise a VMPC cipher.
+             initialise a VMPC cipher.
             
-            @param forEncryption
-               whether or not we are for encryption.
-            @param params
-               the parameters required to set up the cipher.
-            @exception ArgumentException
-               if the params argument is inappropriate.
+             @param forEncryption
+                whether or not we are for encryption.
+             @param params
+                the parameters required to set up the cipher.
+             @exception ArgumentException
+                if the params argument is inappropriate.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Engines.XSalsa20Engine">
             <summary>
@@ -14031,12 +14031,12 @@
             In contrast to the paper, the order of key setup and salt setup is reversed:
             state &lt;- ExpandKey(state, 0, key)
             state %lt;- ExpandKey(state, 0, salt)
-            This corresponds to the OpenBSD reference implementation of Bcrypt. 
+            This corresponds to the OpenBSD reference implementation of Bcrypt.
             </p><p>
-            Note: 
+            Note:
             There is no successful cryptanalysis (status 2015), but
             the amount of memory and the band width of Bcrypt
-            may be insufficient to effectively prevent attacks 
+            may be insufficient to effectively prevent attacks
             with custom hardware like FPGAs, ASICs
             </p><p>
             This implementation uses some parts of Bouncy Castle's BlowfishEngine.
@@ -14154,11 +14154,11 @@
             page 164 of "Handbook of Applied Cryptography".</p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Generators.ElGamalParametersGenerator.GenerateParameters">
-                     * which Generates the p and g values from the given parameters,
-                     * returning the ElGamalParameters object.
-                     * <p>
-                     * Note: can take a while...
-            		 * </p>
+            which Generates the p and g values from the given parameters,
+            returning the ElGamalParameters object.
+            <p>
+            Note: can take a while...
+            </p>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Generators.Gost3410KeyPairGenerator">
             a GOST3410 key pair generator.
@@ -14335,10 +14335,10 @@
             
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Generators.OpenSslPbeParametersGenerator.Init(System.Byte[],System.Byte[])">
-            Initialise - note the iteration count for this algorithm is fixed at 1.
+             Initialise - note the iteration count for this algorithm is fixed at 1.
             
-            @param password password to use.
-            @param salt salt to use.
+             @param password password to use.
+             @param salt salt to use.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Generators.OpenSslPbeParametersGenerator.GenerateDerivedKey(System.Int32)">
             the derived key function, the ith hash of the password and the salt.
@@ -15398,17 +15398,17 @@
             <p>
             CMAC is analogous to OMAC1 - see also en.wikipedia.org/wiki/CMAC
             </p><p>
-            CMAC is a NIST recomendation - see 
+            CMAC is a NIST recomendation - see
             csrc.nist.gov/CryptoToolkit/modes/800-38_Series_Publications/SP800-38B.pdf
             </p><p>
             CMAC/OMAC1 is a blockcipher-based message authentication code designed and
             analyzed by Tetsu Iwata and Kaoru Kurosawa.
             </p><p>
-            CMAC/OMAC1 is a simple variant of the CBC MAC (Cipher Block Chaining Message 
+            CMAC/OMAC1 is a simple variant of the CBC MAC (Cipher Block Chaining Message
             Authentication Code). OMAC stands for One-Key CBC MAC.
             </p><p>
             It supports 128- or 64-bits block ciphers, with any key size, and returns
-            a MAC with dimension less or equal to the block size of the underlying 
+            a MAC with dimension less or equal to the block size of the underlying
             cipher.
             </p>
         </member>
@@ -15883,17 +15883,17 @@
              case the exception will never Get thrown).
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Modes.EaxBlockCipher">
-            A Two-Pass Authenticated-Encryption Scheme Optimized for Simplicity and 
-            Efficiency - by M. Bellare, P. Rogaway, D. Wagner.
+             A Two-Pass Authenticated-Encryption Scheme Optimized for Simplicity and
+             Efficiency - by M. Bellare, P. Rogaway, D. Wagner.
             
-            http://www.cs.ucdavis.edu/~rogaway/papers/eax.pdf
+             http://www.cs.ucdavis.edu/~rogaway/papers/eax.pdf
             
-            EAX is an AEAD scheme based on CTR and OMAC1/CMAC, that uses a single block 
-            cipher to encrypt and authenticate data. It's on-line (the length of a 
-            message isn't needed to begin processing it), has good performances, it's
-            simple and provably secure (provided the underlying block cipher is secure).
+             EAX is an AEAD scheme based on CTR and OMAC1/CMAC, that uses a single block
+             cipher to encrypt and authenticate data. It's on-line (the length of a
+             message isn't needed to begin processing it), has good performances, it's
+             simple and provably secure (provided the underlying block cipher is secure).
             
-            Of course, this implementations is NOT thread-safe.
+             Of course, this implementations is NOT thread-safe.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Modes.EaxBlockCipher.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.IBlockCipher)">
              Constructor that accepts an instance of a block cipher engine.
@@ -16371,13 +16371,13 @@
             cipher.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Modes.OpenPgpCfbBlockCipher">
-                * Implements OpenPGP's rather strange version of Cipher-FeedBack (CFB) mode
-                * on top of a simple cipher. This class assumes the IV has been prepended
-                * to the data stream already, and just accomodates the reset after
-                * (blockSize + 2) bytes have been read.
-                * <p>
-                * For further info see <a href="http://www.ietf.org/rfc/rfc2440.html">RFC 2440</a>.
-            	* </p>
+            Implements OpenPGP's rather strange version of Cipher-FeedBack (CFB) mode
+            on top of a simple cipher. This class assumes the IV has been prepended
+            to the data stream already, and just accomodates the reset after
+            (blockSize + 2) bytes have been read.
+            <p>
+            For further info see <a href="http://www.ietf.org/rfc/rfc2440.html">RFC 2440</a>.
+            </p>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.Modes.OpenPgpCfbBlockCipher.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Crypto.IBlockCipher)">
              Basic constructor.
@@ -18109,14 +18109,14 @@
             Returns a <code>SimpleBigDecimal</code> representing the same numerical
             value as <code>value</code>.
             @param value The value of the <code>SimpleBigDecimal</code> to be
-            created. 
+            created.
             @param scale The scale of the <code>SimpleBigDecimal</code> to be
-            created. 
+            created.
             @return The such created <code>SimpleBigDecimal</code>.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Abc.SimpleBigDecimal.#ctor(Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.BigInteger,System.Int32)">
             Constructor for <code>SimpleBigDecimal</code>. The value of the
-            constructed <code>SimpleBigDecimal</code> Equals <code>bigInt / 
+            constructed <code>SimpleBigDecimal</code> Equals <code>bigInt /
             2<sup>scale</sup></code>.
             @param bigInt The <code>bigInt</code> value parameter.
             @param scale The scale of the constructed <code>SimpleBigDecimal</code>.
@@ -18169,7 +18169,7 @@
             Computes the norm of an element <code>&#955;</code> of
             <code><b>R</b>[&#964;]</code>, where <code>&#955; = u + v&#964;</code>
             and <code>u</code> and <code>u</code> are real numbers (elements of
-            <code><b>R</b></code>). 
+            <code><b>R</b></code>).
             @param mu The parameter <code>&#956;</code> of the elliptic curve.
             @param u The real part of the element <code>&#955;</code> of
             <code><b>R</b>[&#964;]</code>.
@@ -18216,7 +18216,7 @@
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Abc.Tnaf.Tau(Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.AbstractF2mPoint)">
             Applies the operation <code>&#964;()</code> to an
-            <code>AbstractF2mPoint</code>. 
+            <code>AbstractF2mPoint</code>.
             @param p The AbstractF2mPoint to which <code>&#964;()</code> is applied.
             @return <code>&#964;(p)</code>
         </member>
@@ -18225,7 +18225,7 @@
             @param curve The elliptic curve from which to obtain <code>&#956;</code>.
             The curve must be a Koblitz curve, i.e. <code>a</code> Equals
             <code>0</code> or <code>1</code> and <code>b</code> Equals
-            <code>1</code>. 
+            <code>1</code>.
             @return <code>&#956;</code> of the elliptic curve.
             @throws ArgumentException if the given ECCurve is not a Koblitz
             curve.
@@ -18247,14 +18247,14 @@
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Abc.Tnaf.GetTw(System.SByte,System.Int32)">
             Computes the auxiliary value <code>t<sub>w</sub></code>. If the width is
             4, then for <code>mu = 1</code>, <code>t<sub>w</sub> = 6</code> and for
-            <code>mu = -1</code>, <code>t<sub>w</sub> = 10</code> 
+            <code>mu = -1</code>, <code>t<sub>w</sub> = 10</code>
             @param mu The parameter <code>&#956;</code> of the elliptic curve.
             @param w The window width of the WTNAF.
             @return the auxiliary value <code>t<sub>w</sub></code>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Abc.Tnaf.GetSi(Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.AbstractF2mCurve)">
             Computes the auxiliary values <code>s<sub>0</sub></code> and
-            <code>s<sub>1</sub></code> used for partial modular reduction. 
+            <code>s<sub>1</sub></code> used for partial modular reduction.
             @param curve The elliptic curve for which to compute
             <code>s<sub>0</sub></code> and <code>s<sub>1</sub></code>.
             @throws ArgumentException if <code>curve</code> is not a
@@ -18317,7 +18317,7 @@
             Does the precomputation for WTNAF multiplication.
             @param p The <code>ECPoint</code> for which to do the precomputation.
             @param a The parameter <code>a</code> of the elliptic curve.
-            @return The precomputation array for <code>p</code>. 
+            @return The precomputation array for <code>p</code>.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Abc.ZTauElement">
             Class representing an element of <code><b>Z</b>[&#964;]</code>. Let
@@ -18389,58 +18389,58 @@
             none exists it returns null.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECAlgorithms.ReferenceMultiply(Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint,Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.BigInteger)">
-            Simple shift-and-add multiplication. Serves as reference implementation to verify (possibly
-            faster) implementations, and for very small scalars. CAUTION: This implementation is NOT
-            constant-time in any way. It is only intended to be used for diagnostics.
+             Simple shift-and-add multiplication. Serves as reference implementation to verify (possibly
+             faster) implementations, and for very small scalars. CAUTION: This implementation is NOT
+             constant-time in any way. It is only intended to be used for diagnostics.
             
-            @param p
-                       The point to multiply.
-            @param k
-                       The multiplier.
-            @return The result of the point multiplication <code>kP</code>.
+             @param p
+                        The point to multiply.
+             @param k
+                        The multiplier.
+             @return The result of the point multiplication <code>kP</code>.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECCurve">
             <remarks>Base class for an elliptic curve.</remarks>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECCurve.Precompute(Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint,System.String,Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Multiplier.IPreCompCallback)">
-            Compute a <code>PreCompInfo</code> for a point on this curve, under a given name. Used by
-            <code>ECMultiplier</code>s to save the precomputation for this <code>ECPoint</code> for use
-            by subsequent multiplication.
+             Compute a <code>PreCompInfo</code> for a point on this curve, under a given name. Used by
+             <code>ECMultiplier</code>s to save the precomputation for this <code>ECPoint</code> for use
+             by subsequent multiplication.
             
-            @param point
-                       The <code>ECPoint</code> to store precomputations for.
-            @param name
-                       A <code>String</code> used to index precomputations of different types.
-            @param callback
-                       Called to calculate the <code>PreCompInfo</code>.
+             @param point
+                        The <code>ECPoint</code> to store precomputations for.
+             @param name
+                        A <code>String</code> used to index precomputations of different types.
+             @param callback
+                        Called to calculate the <code>PreCompInfo</code>.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECCurve.NormalizeAll(Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint[])">
-            Normalization ensures that any projective coordinate is 1, and therefore that the x, y
-            coordinates reflect those of the equivalent point in an affine coordinate system. Where more
-            than one point is to be normalized, this method will generally be more efficient than
-            normalizing each point separately.
+             Normalization ensures that any projective coordinate is 1, and therefore that the x, y
+             coordinates reflect those of the equivalent point in an affine coordinate system. Where more
+             than one point is to be normalized, this method will generally be more efficient than
+             normalizing each point separately.
             
-            @param points
-                       An array of points that will be updated in place with their normalized versions,
-                       where necessary
+             @param points
+                        An array of points that will be updated in place with their normalized versions,
+                        where necessary
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECCurve.NormalizeAll(Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint[],System.Int32,System.Int32,Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECFieldElement)">
-            Normalization ensures that any projective coordinate is 1, and therefore that the x, y
-            coordinates reflect those of the equivalent point in an affine coordinate system. Where more
-            than one point is to be normalized, this method will generally be more efficient than
-            normalizing each point separately. An (optional) z-scaling factor can be applied; effectively
-            each z coordinate is scaled by this value prior to normalization (but only one
-            actual multiplication is needed).
+             Normalization ensures that any projective coordinate is 1, and therefore that the x, y
+             coordinates reflect those of the equivalent point in an affine coordinate system. Where more
+             than one point is to be normalized, this method will generally be more efficient than
+             normalizing each point separately. An (optional) z-scaling factor can be applied; effectively
+             each z coordinate is scaled by this value prior to normalization (but only one
+             actual multiplication is needed).
             
-            @param points
-                       An array of points that will be updated in place with their normalized versions,
-                       where necessary
-            @param off
-                       The start of the range of points to normalize
-            @param len
-                       The length of the range of points to normalize
-            @param iso
-                       The (optional) z-scaling factor - can be null
+             @param points
+                        An array of points that will be updated in place with their normalized versions,
+                        where necessary
+             @param off
+                        The start of the range of points to normalize
+             @param len
+                        The length of the range of points to normalize
+             @param iso
+                        The (optional) z-scaling factor - can be null
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECCurve.CreateCacheSafeLookupTable(Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint[],System.Int32,System.Int32)">
             Create a cache-safe lookup table for the specified sequence of points. All the points MUST
@@ -18676,40 +18676,40 @@
             base class for points on elliptic curves.
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint.AffineXCoord">
-            Returns the affine x-coordinate after checking that this point is normalized.
+             Returns the affine x-coordinate after checking that this point is normalized.
             
-            @return The affine x-coordinate of this point
-            @throws IllegalStateException if the point is not normalized
+             @return The affine x-coordinate of this point
+             @throws IllegalStateException if the point is not normalized
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint.AffineYCoord">
-            Returns the affine y-coordinate after checking that this point is normalized
+             Returns the affine y-coordinate after checking that this point is normalized
             
-            @return The affine y-coordinate of this point
-            @throws IllegalStateException if the point is not normalized
+             @return The affine y-coordinate of this point
+             @throws IllegalStateException if the point is not normalized
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint.XCoord">
-            Returns the x-coordinate.
+             Returns the x-coordinate.
             
-            Caution: depending on the curve's coordinate system, this may not be the same value as in an
-            affine coordinate system; use Normalize() to get a point where the coordinates have their
-            affine values, or use AffineXCoord if you expect the point to already have been normalized.
+             Caution: depending on the curve's coordinate system, this may not be the same value as in an
+             affine coordinate system; use Normalize() to get a point where the coordinates have their
+             affine values, or use AffineXCoord if you expect the point to already have been normalized.
             
-            @return the x-coordinate of this point
+             @return the x-coordinate of this point
         </member>
         <member name="P:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint.YCoord">
-            Returns the y-coordinate.
+             Returns the y-coordinate.
             
-            Caution: depending on the curve's coordinate system, this may not be the same value as in an
-            affine coordinate system; use Normalize() to get a point where the coordinates have their
-            affine values, or use AffineYCoord if you expect the point to already have been normalized.
+             Caution: depending on the curve's coordinate system, this may not be the same value as in an
+             affine coordinate system; use Normalize() to get a point where the coordinates have their
+             affine values, or use AffineYCoord if you expect the point to already have been normalized.
             
-            @return the y-coordinate of this point
+             @return the y-coordinate of this point
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPoint.Normalize">
-            Normalization ensures that any projective coordinate is 1, and therefore that the x, y
-            coordinates reflect those of the equivalent point in an affine coordinate system.
+             Normalization ensures that any projective coordinate is 1, and therefore that the x, y
+             coordinates reflect those of the equivalent point in an affine coordinate system.
             
-            @return a new ECPoint instance representing the same point, but with normalized coordinates
+             @return a new ECPoint instance representing the same point, but with normalized coordinates
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.ECPointBase.GetEncoded(System.Boolean)">
             return the field element encoded with point compression. (S 4.3.6)
@@ -18792,32 +18792,32 @@
             returned <code>byte[]</code>.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Multiplier.WNafUtilities.GetWindowSize(System.Int32)">
-            Determine window width to use for a scalar multiplication of the given size.
+             Determine window width to use for a scalar multiplication of the given size.
             
-            @param bits the bit-length of the scalar to multiply by
-            @return the window size to use
+             @param bits the bit-length of the scalar to multiply by
+             @return the window size to use
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Multiplier.WNafUtilities.GetWindowSize(System.Int32,System.Int32)">
-            Determine window width to use for a scalar multiplication of the given size.
+             Determine window width to use for a scalar multiplication of the given size.
             
-            @param bits the bit-length of the scalar to multiply by
-            @param maxWidth the maximum window width to return 
-            @return the window size to use
+             @param bits the bit-length of the scalar to multiply by
+             @param maxWidth the maximum window width to return
+             @return the window size to use
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Multiplier.WNafUtilities.GetWindowSize(System.Int32,System.Int32[])">
-            Determine window width to use for a scalar multiplication of the given size.
+             Determine window width to use for a scalar multiplication of the given size.
             
-            @param bits the bit-length of the scalar to multiply by
-            @param windowSizeCutoffs a monotonically increasing list of bit sizes at which to increment the window width
-            @return the window size to use
+             @param bits the bit-length of the scalar to multiply by
+             @param windowSizeCutoffs a monotonically increasing list of bit sizes at which to increment the window width
+             @return the window size to use
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Multiplier.WNafUtilities.GetWindowSize(System.Int32,System.Int32[],System.Int32)">
-            Determine window width to use for a scalar multiplication of the given size.
+             Determine window width to use for a scalar multiplication of the given size.
             
-            @param bits the bit-length of the scalar to multiply by
-            @param windowSizeCutoffs a monotonically increasing list of bit sizes at which to increment the window width
-            @param maxWidth the maximum window width to return 
-            @return the window size to use
+             @param bits the bit-length of the scalar to multiply by
+             @param windowSizeCutoffs a monotonically increasing list of bit sizes at which to increment the window width
+             @param maxWidth the maximum window width to return
+             @return the window size to use
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Multiplier.WTauNafMultiplier">
             Class implementing the WTNAF (Window
@@ -19290,7 +19290,7 @@
             PEM generator for the original set of PEM objects used in Open SSL.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.OpenSsl.PemReader">
-            Class for reading OpenSSL PEM encoded streams containing 
+            Class for reading OpenSSL PEM encoded streams containing
             X509 certificates, PKCS8 encoded keys and PKCS7 objects.
             <p>
             In the case of PKCS7 objects the reader will return a CMS ContentInfo object. Keys and
@@ -19564,43 +19564,43 @@
             </summary>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixAttrCertChecker.GetSupportedExtensions">
-            Returns an immutable <code>Set</code> of X.509 attribute certificate
-            extensions that this <code>PkixAttrCertChecker</code> supports or
-            <code>null</code> if no extensions are supported.
-            <p>
-            Each element of the set is a <code>String</code> representing the
-            Object Identifier (OID) of the X.509 extension that is supported.
-            </p>
-            <p>
-            All X.509 attribute certificate extensions that a
-            <code>PkixAttrCertChecker</code> might possibly be able to process
-            should be included in the set.
-            </p>
+             Returns an immutable <code>Set</code> of X.509 attribute certificate
+             extensions that this <code>PkixAttrCertChecker</code> supports or
+             <code>null</code> if no extensions are supported.
+             <p>
+             Each element of the set is a <code>String</code> representing the
+             Object Identifier (OID) of the X.509 extension that is supported.
+             </p>
+             <p>
+             All X.509 attribute certificate extensions that a
+             <code>PkixAttrCertChecker</code> might possibly be able to process
+             should be included in the set.
+             </p>
             
-            @return an immutable <code>Set</code> of X.509 extension OIDs (in
-                    <code>String</code> format) supported by this
-                    <code>PkixAttrCertChecker</code>, or <code>null</code> if no
-                    extensions are supported
+             @return an immutable <code>Set</code> of X.509 extension OIDs (in
+                     <code>String</code> format) supported by this
+                     <code>PkixAttrCertChecker</code>, or <code>null</code> if no
+                     extensions are supported
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixAttrCertChecker.Check(Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509V2AttributeCertificate,Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPath,Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPath,System.Collections.Generic.ICollection{System.String})">
-            Performs checks on the specified attribute certificate. Every handled
-            extension is rmeoved from the <code>unresolvedCritExts</code>
-            collection.
+             Performs checks on the specified attribute certificate. Every handled
+             extension is rmeoved from the <code>unresolvedCritExts</code>
+             collection.
             
-            @param attrCert The attribute certificate to be checked.
-            @param certPath The certificate path which belongs to the attribute
-                       certificate issuer public key certificate.
-            @param holderCertPath The certificate path which belongs to the holder
-                       certificate.
-            @param unresolvedCritExts a <code>Collection</code> of OID strings
-                       representing the current set of unresolved critical extensions
-            @throws CertPathValidatorException if the specified attribute certificate
-                        does not pass the check.
+             @param attrCert The attribute certificate to be checked.
+             @param certPath The certificate path which belongs to the attribute
+                        certificate issuer public key certificate.
+             @param holderCertPath The certificate path which belongs to the holder
+                        certificate.
+             @param unresolvedCritExts a <code>Collection</code> of OID strings
+                        representing the current set of unresolved critical extensions
+             @throws CertPathValidatorException if the specified attribute certificate
+                         does not pass the check.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixAttrCertChecker.Clone">
-            Returns a clone of this object.
+             Returns a clone of this object.
             
-            @return a copy of this <code>PkixAttrCertChecker</code>
+             @return a copy of this <code>PkixAttrCertChecker</code>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixAttrCertPathBuilder.Build(Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixBuilderParameters)">
              Build and validate a CertPath using the given parameter.
@@ -19609,33 +19609,33 @@
                         build the CertPath
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixAttrCertPathValidator">
-            CertPathValidatorSpi implementation for X.509 Attribute Certificates la RFC 3281.
+             CertPathValidatorSpi implementation for X.509 Attribute Certificates la RFC 3281.
             
-            @see org.bouncycastle.x509.ExtendedPkixParameters
+             @see org.bouncycastle.x509.ExtendedPkixParameters
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixAttrCertPathValidator.Validate(Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPath,Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixParameters)">
-            Validates an attribute certificate with the given certificate path.
+             Validates an attribute certificate with the given certificate path.
             
-            <p>
-            <code>params</code> must be an instance of
-            <code>ExtendedPkixParameters</code>.
-            </p><p>
-            The target constraints in the <code>params</code> must be an
-            <code>X509AttrCertStoreSelector</code> with at least the attribute
-            certificate criterion set. Obey that also target informations may be
-            necessary to correctly validate this attribute certificate.
-            </p><p>
-            The attribute certificate issuer must be added to the trusted attribute
-            issuers with {@link ExtendedPkixParameters#setTrustedACIssuers(Set)}.
-            </p>
-            @param certPath The certificate path which belongs to the attribute
-                       certificate issuer public key certificate.
-            @param params The PKIX parameters.
-            @return A <code>PKIXCertPathValidatorResult</code> of the result of
-                    validating the <code>certPath</code>.
-            @throws InvalidAlgorithmParameterException if <code>params</code> is
-                        inappropriate for this validator.
-            @throws CertPathValidatorException if the verification fails.
+             <p>
+             <code>params</code> must be an instance of
+             <code>ExtendedPkixParameters</code>.
+             </p><p>
+             The target constraints in the <code>params</code> must be an
+             <code>X509AttrCertStoreSelector</code> with at least the attribute
+             certificate criterion set. Obey that also target informations may be
+             necessary to correctly validate this attribute certificate.
+             </p><p>
+             The attribute certificate issuer must be added to the trusted attribute
+             issuers with {@link ExtendedPkixParameters#setTrustedACIssuers(Set)}.
+             </p>
+             @param certPath The certificate path which belongs to the attribute
+                        certificate issuer public key certificate.
+             @param params The PKIX parameters.
+             @return A <code>PKIXCertPathValidatorResult</code> of the result of
+                     validating the <code>certPath</code>.
+             @throws InvalidAlgorithmParameterException if <code>params</code> is
+                         inappropriate for this validator.
+             @throws CertPathValidatorException if the verification fails.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixBuilderParameters">
             <summary>
@@ -19671,11 +19671,11 @@
             <param name="excludedCerts">The excluded certificates to set.</param>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixBuilderParameters.SetParams(Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixParameters)">
-            Can alse handle <code>ExtendedPKIXBuilderParameters</code> and
-            <code>PKIXBuilderParameters</code>.
+             Can alse handle <code>ExtendedPKIXBuilderParameters</code> and
+             <code>PKIXBuilderParameters</code>.
             
-            @param params Parameters to set.
-            @see org.bouncycastle.x509.ExtendedPKIXParameters#setParams(java.security.cert.PKIXParameters)
+             @param params Parameters to set.
+             @see org.bouncycastle.x509.ExtendedPKIXParameters#setParams(java.security.cert.PKIXParameters)
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixBuilderParameters.Clone">
              Makes a copy of this <code>PKIXParameters</code> object. Changes to the
@@ -19835,75 +19835,75 @@
             </summary>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPathChecker.Init(System.Boolean)">
-                     * Initializes the internal state of this <code>PKIXCertPathChecker</code>.
-                     * <p>
-                     * The <code>forward</code> flag specifies the order that certificates
-                     * will be passed to the {@link #check check} method (forward or reverse). A
-                     * <code>PKIXCertPathChecker</code> <b>must</b> support reverse checking
-                     * and <b>may</b> support forward checking.
-            		 * </p>
-                     * 
-                     * @param forward
-                     *            the order that certificates are presented to the
-                     *            <code>check</code> method. If <code>true</code>,
-                     *            certificates are presented from target to most-trusted CA
-                     *            (forward); if <code>false</code>, from most-trusted CA to
-                     *            target (reverse).
-                     * @exception CertPathValidatorException
-                     *                if this <code>PKIXCertPathChecker</code> is unable to
-                     *                check certificates in the specified order; it should never
-                     *                be thrown if the forward flag is false since reverse
-                     *                checking must be supported
+             Initializes the internal state of this <code>PKIXCertPathChecker</code>.
+             <p>
+             The <code>forward</code> flag specifies the order that certificates
+             will be passed to the {@link #check check} method (forward or reverse). A
+             <code>PKIXCertPathChecker</code> <b>must</b> support reverse checking
+             and <b>may</b> support forward checking.
+             </p>
+            
+             @param forward
+                        the order that certificates are presented to the
+                        <code>check</code> method. If <code>true</code>,
+                        certificates are presented from target to most-trusted CA
+                        (forward); if <code>false</code>, from most-trusted CA to
+                        target (reverse).
+             @exception CertPathValidatorException
+                            if this <code>PKIXCertPathChecker</code> is unable to
+                            check certificates in the specified order; it should never
+                            be thrown if the forward flag is false since reverse
+                            checking must be supported
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPathChecker.IsForwardCheckingSupported">
-            Indicates if forward checking is supported. Forward checking refers to
-            the ability of the <code>PKIXCertPathChecker</code> to perform its
-            checks when certificates are presented to the <code>check</code> method
-            in the forward direction (from target to most-trusted CA).
+             Indicates if forward checking is supported. Forward checking refers to
+             the ability of the <code>PKIXCertPathChecker</code> to perform its
+             checks when certificates are presented to the <code>check</code> method
+             in the forward direction (from target to most-trusted CA).
             
-            @return <code>true</code> if forward checking is supported,
-                    <code>false</code> otherwise
+             @return <code>true</code> if forward checking is supported,
+                     <code>false</code> otherwise
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPathChecker.GetSupportedExtensions">
-                     * Returns an immutable <code>Set</code> of X.509 certificate extensions
-                     * that this <code>PKIXCertPathChecker</code> supports (i.e. recognizes,
-                     * is able to process), or <code>null</code> if no extensions are
-                     * supported.
-                     * <p>
-                     * Each element of the set is a <code>String</code> representing the
-                     * Object Identifier (OID) of the X.509 extension that is supported. The OID
-                     * is represented by a set of nonnegative integers separated by periods.
-                     * </p><p>
-                     * All X.509 certificate extensions that a <code>PKIXCertPathChecker</code>
-                     * might possibly be able to process should be included in the set.
-            		 * </p>
-                     * 
-                     * @return an immutable <code>Set</code> of X.509 extension OIDs (in
-                     *         <code>String</code> format) supported by this
-                     *         <code>PKIXCertPathChecker</code>, or <code>null</code> if no
-                     *         extensions are supported
+             Returns an immutable <code>Set</code> of X.509 certificate extensions
+             that this <code>PKIXCertPathChecker</code> supports (i.e. recognizes,
+             is able to process), or <code>null</code> if no extensions are
+             supported.
+             <p>
+             Each element of the set is a <code>String</code> representing the
+             Object Identifier (OID) of the X.509 extension that is supported. The OID
+             is represented by a set of nonnegative integers separated by periods.
+             </p><p>
+             All X.509 certificate extensions that a <code>PKIXCertPathChecker</code>
+             might possibly be able to process should be included in the set.
+             </p>
+            
+             @return an immutable <code>Set</code> of X.509 extension OIDs (in
+                     <code>String</code> format) supported by this
+                     <code>PKIXCertPathChecker</code>, or <code>null</code> if no
+                     extensions are supported
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPathChecker.Check(Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509Certificate,System.Collections.Generic.ISet{System.String})">
-            Performs the check(s) on the specified certificate using its internal
-            state and removes any critical extensions that it processes from the
-            specified collection of OID strings that represent the unresolved
-            critical extensions. The certificates are presented in the order
-            specified by the <code>init</code> method.
+             Performs the check(s) on the specified certificate using its internal
+             state and removes any critical extensions that it processes from the
+             specified collection of OID strings that represent the unresolved
+             critical extensions. The certificates are presented in the order
+             specified by the <code>init</code> method.
             
-            @param cert
-                       the <code>Certificate</code> to be checked
-            @param unresolvedCritExts
-                       a <code>Collection</code> of OID strings representing the
-                       current set of unresolved critical extensions
-            @exception CertPathValidatorException
-                           if the specified certificate does not pass the check
+             @param cert
+                        the <code>Certificate</code> to be checked
+             @param unresolvedCritExts
+                        a <code>Collection</code> of OID strings representing the
+                        current set of unresolved critical extensions
+             @exception CertPathValidatorException
+                            if the specified certificate does not pass the check
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPathChecker.Clone">
-            Returns a clone of this object. Calls the <code>Object.clone()</code>
-            method. All subclasses which maintain state must support and override
-            this method, if necessary.
+             Returns a clone of this object. Calls the <code>Object.clone()</code>
+             method. All subclasses which maintain state must support and override
+             this method, if necessary.
             
-            @return a copy of this <code>PKIXCertPathChecker</code>
+             @return a copy of this <code>PKIXCertPathChecker</code>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPathValidator">
             The <i>Service Provider Interface</i> (<b>SPI</b>)
@@ -19932,16 +19932,16 @@
             </summary>
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixCertPathValidatorException">
-             An exception indicating one of a variety of problems encountered when 
+             An exception indicating one of a variety of problems encountered when
              validating a certification path. <br />
              <br />
              A <code>CertPathValidatorException</code> provides support for wrapping
-             exceptions. The {@link #getCause getCause} method returns the throwable, 
+             exceptions. The {@link #getCause getCause} method returns the throwable,
              if any, that caused this exception to be thrown. <br />
              <br />
-             A <code>CertPathValidatorException</code> may also include the 
-             certification path that was being validated when the exception was thrown 
-             and the index of the certificate in the certification path that caused the 
+             A <code>CertPathValidatorException</code> may also include the
+             certification path that was being validated when the exception was thrown
+             and the index of the certificate in the certification path that caused the
              exception to be thrown. Use the {@link #getCertPath getCertPath} and
              {@link #getIndex getIndex} methods to retrieve this information.<br />
              <br />
@@ -20801,53 +20801,53 @@
              @throws AnnotatedException if an exception occurs.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.Rfc3281CertPathUtilities.CheckCrls(Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509V2AttributeCertificate,Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixParameters,Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509Certificate,System.DateTime,System.Collections.Generic.IList{Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509Certificate})">
-            Checks if an attribute certificate is revoked.
+             Checks if an attribute certificate is revoked.
             
-            @param attrCert Attribute certificate to check if it is revoked.
-            @param paramsPKIX PKIX parameters.
-            @param issuerCert The issuer certificate of the attribute certificate
-                       <code>attrCert</code>.
-            @param validDate The date when the certificate revocation status should
-                       be checked.
-            @param certPathCerts The certificates of the certification path to be
-                       checked.
+             @param attrCert Attribute certificate to check if it is revoked.
+             @param paramsPKIX PKIX parameters.
+             @param issuerCert The issuer certificate of the attribute certificate
+                        <code>attrCert</code>.
+             @param validDate The date when the certificate revocation status should
+                        be checked.
+             @param certPathCerts The certificates of the certification path to be
+                        checked.
             
-            @throws CertPathValidatorException if the certificate is revoked or the
-                        status cannot be checked or some error occurs.
+             @throws CertPathValidatorException if the certificate is revoked or the
+                         status cannot be checked or some error occurs.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.Rfc3281CertPathUtilities.ProcessAttrCert1(Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509V2AttributeCertificate,Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixParameters)">
-            Searches for a holder public key certificate and verifies its
-            certification path.
+             Searches for a holder public key certificate and verifies its
+             certification path.
             
-            @param attrCert the attribute certificate.
-            @param pkixParams The PKIX parameters.
-            @return The certificate path of the holder certificate.
-            @throws Exception if
-                        <ul>
-                        <li>no public key certificate can be found although holder
-                        information is given by an entity name or a base certificate
-                        ID</li>
-                        <li>support classes cannot be created</li>
-                        <li>no certification path for the public key certificate can
-                        be built</li>
-                        </ul>
+             @param attrCert the attribute certificate.
+             @param pkixParams The PKIX parameters.
+             @return The certificate path of the holder certificate.
+             @throws Exception if
+                         <ul>
+                         <li>no public key certificate can be found although holder
+                         information is given by an entity name or a base certificate
+                         ID</li>
+                         <li>support classes cannot be created</li>
+                         <li>no certification path for the public key certificate can
+                         be built</li>
+                         </ul>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.Rfc3281CertPathUtilities.CheckCrl(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.DistributionPoint,Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509V2AttributeCertificate,Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.PkixParameters,System.DateTime,Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509Certificate,Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.CertStatus,Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.ReasonsMask,System.Collections.Generic.IList{Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.X509Certificate})">
             
-            Checks a distribution point for revocation information for the
-            certificate <code>attrCert</code>.
+             Checks a distribution point for revocation information for the
+             certificate <code>attrCert</code>.
             
-            @param dp The distribution point to consider.
-            @param attrCert The attribute certificate which should be checked.
-            @param paramsPKIX PKIX parameters.
-            @param validDate The date when the certificate revocation status should
-                       be checked.
-            @param issuerCert Certificate to check if it is revoked.
-            @param reasonMask The reasons mask which is already checked.
-            @param certPathCerts The certificates of the certification path to be
-                       checked.
-            @throws Exception if the certificate is revoked or the status
-                        cannot be checked or some error occurs.
+             @param dp The distribution point to consider.
+             @param attrCert The attribute certificate which should be checked.
+             @param paramsPKIX PKIX parameters.
+             @param validDate The date when the certificate revocation status should
+                        be checked.
+             @param issuerCert Certificate to check if it is revoked.
+             @param reasonMask The reasons mask which is already checked.
+             @param certPathCerts The certificates of the certification path to be
+                        checked.
+             @throws Exception if the certificate is revoked or the status
+                         cannot be checked or some error occurs.
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Pkix.TrustAnchor">
             <summary>
@@ -25245,12 +25245,12 @@
             <returns></returns>
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Utilities.BigIntegers.CreateRandomInRange(Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.BigInteger,Best.HTTP.SecureProtocol.Org.BouncyCastle.Math.BigInteger,Best.HTTP.SecureProtocol.Org.BouncyCastle.Security.SecureRandom)">
-            Return a random BigInteger not less than 'min' and not greater than 'max'
+             Return a random BigInteger not less than 'min' and not greater than 'max'
             
-            @param min the least value that may be generated
-            @param max the greatest value that may be generated
-            @param random the source of randomness
-            @return a random BigInteger value in the range [min,max]
+             @param min the least value that may be generated
+             @param max the greatest value that may be generated
+             @param random the source of randomness
+             @return a random BigInteger value in the range [min,max]
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Utilities.Bzip2.BZip2Constants">
              Base class for both the compress and decompress classes.
@@ -25569,14 +25569,14 @@
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Utilities.Encoders.UrlBase64">
             Convert binary data to and from UrlBase64 encoding.  This is identical to
-            Base64 encoding, except that the padding character is "." and the other 
+            Base64 encoding, except that the padding character is "." and the other
             non-alphanumeric characters are "-" and "_" instead of "+" and "/".
             <p>
             The purpose of UrlBase64 encoding is to provide a compact encoding of binary
             data that is safe for use as an URL parameter. Base64 encoding does not
-            produce encoded values that are safe for use in URLs, since "/" can be 
+            produce encoded values that are safe for use in URLs, since "/" can be
             interpreted as a path delimiter; "+" is the encoded form of a space; and
-            "=" is used to separate a name from the corresponding value in an URL 
+            "=" is used to separate a name from the corresponding value in an URL
             parameter.
             </p>
         </member>
@@ -25614,14 +25614,14 @@
         </member>
         <member name="T:Best.HTTP.SecureProtocol.Org.BouncyCastle.Utilities.Encoders.UrlBase64Encoder">
             Convert binary data to and from UrlBase64 encoding.  This is identical to
-            Base64 encoding, except that the padding character is "." and the other 
+            Base64 encoding, except that the padding character is "." and the other
             non-alphanumeric characters are "-" and "_" instead of "+" and "/".
             <p>
             The purpose of UrlBase64 encoding is to provide a compact encoding of binary
             data that is safe for use as an URL parameter. Base64 encoding does not
-            produce encoded values that are safe for use in URLs, since "/" can be 
+            produce encoded values that are safe for use in URLs, since "/" can be
             interpreted as a path delimiter; "+" is the encoded form of a space; and
-            "=" is used to separate a name from the corresponding value in an URL 
+            "=" is used to separate a name from the corresponding value in an URL
             parameter.
             </p>
         </member>
@@ -25773,7 +25773,7 @@
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.Utilities.Net.IPAddress.IsValidIPv4(System.String)">
              Validate the given IPv4 address.
-             
+            
              @param address the IP address as a string.
             
              @return true if a valid IPv4 address, false otherwise
@@ -26020,26 +26020,26 @@
              @throws IOException if a parsing error occurs.
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.Store.X509AttrCertStoreSelector.SetTargetNames(System.Collections.Generic.IEnumerable{System.Object})">
-            Adds a collection with target names criteria. If <code>null</code> is
-            given any will do.
-            <p>
-            The collection consists of either GeneralName objects or byte[] arrays representing
-            DER encoded GeneralName structures.
-            </p>
+             Adds a collection with target names criteria. If <code>null</code> is
+             given any will do.
+             <p>
+             The collection consists of either GeneralName objects or byte[] arrays representing
+             DER encoded GeneralName structures.
+             </p>
             
-            @param names A collection of target names.
-            @throws IOException if a parsing error occurs.
-            @see #AddTargetName(byte[])
-            @see #AddTargetName(GeneralName)
+             @param names A collection of target names.
+             @throws IOException if a parsing error occurs.
+             @see #AddTargetName(byte[])
+             @see #AddTargetName(GeneralName)
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.Store.X509AttrCertStoreSelector.GetTargetNames">
-            Gets the target names. The collection consists of <code>List</code>s
-            made up of an <code>Integer</code> in the first entry and a DER encoded
-            byte array or a <code>String</code> in the second entry.
-            <p>The returned collection is immutable.</p>
+             Gets the target names. The collection consists of <code>List</code>s
+             made up of an <code>Integer</code> in the first entry and a DER encoded
+             byte array or a <code>String</code> in the second entry.
+             <p>The returned collection is immutable.</p>
             
-            @return The collection of target names
-            @see #setTargetNames(Collection)
+             @return The collection of target names
+             @see #setTargetNames(Collection)
         </member>
         <member name="M:Best.HTTP.SecureProtocol.Org.BouncyCastle.X509.Store.X509AttrCertStoreSelector.AddTargetGroup(Best.HTTP.SecureProtocol.Org.BouncyCastle.Asn1.X509.GeneralName)">
              Adds a target group criterion for the attribute certificate to the target
@@ -32553,29 +32553,29 @@
             </summary>
         </member>
         <member name="T:Best.HTTP.Hosts.Settings.HostSettingsManager">
-            Host Settings Hierarchy for the following hosts, settings are stored as leafs:
+             Host Settings Hierarchy for the following hosts, settings are stored as leafs:
             
-            *.com
-            *.example.com
-            example.com
+             *.com
+             *.example.com
+             example.com
             
-            '*' matches one or more subdomains so *.example.com 
-             - matches a.example.com and a.b.example.com
-             - but doesn't match example.com!
+             '*' matches one or more subdomains so *.example.com
+              - matches a.example.com and a.b.example.com
+              - but doesn't match example.com!
             
-                                         
-                                          
-                               [com]                 [localhost]                [org]                      [*]
-                          +------+------+                 |                       |                         |
-                          |             |              [setting]                 [*]                     [setting]
-                    [example]          [*]                                        |
-                    /       \           |                                      [setting]
-                  [b]     [setting]  [setting]
-                   |
-                  [a]
-                   |
-                [setting]
             
+            
+                                [com]                 [localhost]                [org]                      [*]
+                           +------+------+                 |                       |                         |
+                           |             |              [setting]                 [*]                     [setting]
+                     [example]          [*]                                        |
+                     /       \           |                                      [setting]
+                   [b]     [setting]  [setting]
+                    |
+                   [a]
+                    |
+                 [setting]
+             
             <summary>
             Manages host-specific settings for HTTP requests based on hostnames.
             The HostSettingsManager is a powerful tool for fine-tuning HTTP request and connection behaviors
