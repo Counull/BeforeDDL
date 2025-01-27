@@ -43,7 +43,7 @@ public class GrpcManager : MonoBehaviour {
     [Button]
     async void SendSmsRequest() {
         var async = _accountServiceClient.SendSmsCodeAsync(new SendSmsCodeRequest()
-            {PhoneNumber = "14214423334", Purpose = SmsCodePurpose.Register});
+            {PhoneNumber = "17615122477", Purpose = SmsCodePurpose.Register});
         await async.ResponseHeadersAsync;
         await async.ResponseAsync;
         Debug.Log(async.ResponseAsync.Result.Success);
